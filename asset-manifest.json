@@ -1,12 +1,16 @@
 {
   "files": {
-    "main.css": "/eliza-hat/static/css/main.6c1e5d28.css",
-    "main.js": "/eliza-hat/static/js/main.4bca86fe.js",
+    "main.css": "/eliza-hat/static/css/main.0f07309a.css",
+    "main.js": "/eliza-hat/static/js/main.02f28f8c.js",
     "static/js/453.7aad0094.chunk.js": "/eliza-hat/static/js/453.7aad0094.chunk.js",
-    "static/media/left-tape.png": "/eliza-hat/static/media/left-tape.3322b47cffb9f0d0f833.png",
-    "static/media/right.png": "/eliza-hat/static/media/right.f9f685a47d4c76483ad0.png",
-    "static/media/left.png": "/eliza-hat/static/media/left.d378d54b23551b6cc789.png",
-    "static/media/right-tape.png": "/eliza-hat/static/media/right-tape.a2840c4e47a3c1b446d1.png",
+    "static/media/orange-right-tape.png": "/eliza-hat/static/media/orange-right-tape.270253da212aea0c4143.png",
+    "static/media/orange-left-tape.png": "/eliza-hat/static/media/orange-left-tape.2b60bbde9a3d72a54405.png",
+    "static/media/orange-left.png": "/eliza-hat/static/media/orange-left.e40d99f48ceb9b943b39.png",
+    "static/media/orange-right.png": "/eliza-hat/static/media/orange-right.22464cc576d8e1ca78f0.png",
+    "static/media/blue-left-tape.png": "/eliza-hat/static/media/blue-left-tape.3322b47cffb9f0d0f833.png",
+    "static/media/blue-right.png": "/eliza-hat/static/media/blue-right.f9f685a47d4c76483ad0.png",
+    "static/media/blue-left.png": "/eliza-hat/static/media/blue-left.d378d54b23551b6cc789.png",
+    "static/media/blue-right-tape.png": "/eliza-hat/static/media/blue-right-tape.a2840c4e47a3c1b446d1.png",
     "static/media/NHaasGroteskTXStd-Regular.otf": "/eliza-hat/static/media/NHaasGroteskTXStd-Regular.01265ca2f49492afc397.otf",
     "static/media/NHaasGroteskDSStd-Medium.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Medium.d506e199664404bdc650.otf",
     "static/media/NHaasGroteskDSStd-Regular.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Regular.cb8ae55667c4ef813a43.otf",
@@ -14,12 +18,12 @@
     "static/media/NHaasGroteskDSStd-Bold.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Bold.7801dd52d172ebe676ec.otf",
     "static/media/Logo_ElizaOS_White_RGB.svg": "/eliza-hat/static/media/Logo_ElizaOS_White_RGB.bd99ecd3ca60774f7a3dd0c5781e2044.svg",
     "index.html": "/eliza-hat/index.html",
-    "main.6c1e5d28.css.map": "/eliza-hat/static/css/main.6c1e5d28.css.map",
-    "main.4bca86fe.js.map": "/eliza-hat/static/js/main.4bca86fe.js.map",
+    "main.0f07309a.css.map": "/eliza-hat/static/css/main.0f07309a.css.map",
+    "main.02f28f8c.js.map": "/eliza-hat/static/js/main.02f28f8c.js.map",
     "453.7aad0094.chunk.js.map": "/eliza-hat/static/js/453.7aad0094.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c1e5d28.css",
-    "static/js/main.4bca86fe.js"
+    "static/css/main.0f07309a.css",
+    "static/js/main.02f28f8c.js"
   ]
 }
