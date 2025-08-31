@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eliza-hat/static/css/main.0f07309a.css",
-    "main.js": "/eliza-hat/static/js/main.02f28f8c.js",
+    "main.css": "/eliza-hat/static/css/main.a9237140.css",
+    "main.js": "/eliza-hat/static/js/main.c900005f.js",
     "static/js/453.7aad0094.chunk.js": "/eliza-hat/static/js/453.7aad0094.chunk.js",
     "static/media/orange-right-tape.png": "/eliza-hat/static/media/orange-right-tape.270253da212aea0c4143.png",
     "static/media/orange-left-tape.png": "/eliza-hat/static/media/orange-left-tape.2b60bbde9a3d72a54405.png",
@@ -18,12 +18,12 @@
     "static/media/NHaasGroteskDSStd-Bold.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Bold.7801dd52d172ebe676ec.otf",
     "static/media/Logo_ElizaOS_White_RGB.svg": "/eliza-hat/static/media/Logo_ElizaOS_White_RGB.bd99ecd3ca60774f7a3dd0c5781e2044.svg",
     "index.html": "/eliza-hat/index.html",
-    "main.0f07309a.css.map": "/eliza-hat/static/css/main.0f07309a.css.map",
-    "main.02f28f8c.js.map": "/eliza-hat/static/js/main.02f28f8c.js.map",
+    "main.a9237140.css.map": "/eliza-hat/static/css/main.a9237140.css.map",
+    "main.c900005f.js.map": "/eliza-hat/static/js/main.c900005f.js.map",
     "453.7aad0094.chunk.js.map": "/eliza-hat/static/js/453.7aad0094.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f07309a.css",
-    "static/js/main.02f28f8c.js"
+    "static/css/main.a9237140.css",
+    "static/js/main.c900005f.js"
   ]
 }
