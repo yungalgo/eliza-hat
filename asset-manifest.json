@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/eliza-hat/static/css/main.a9237140.css",
-    "main.js": "/eliza-hat/static/js/main.c900005f.js",
-    "static/js/453.7aad0094.chunk.js": "/eliza-hat/static/js/453.7aad0094.chunk.js",
-    "static/media/orange-right-tape.png": "/eliza-hat/static/media/orange-right-tape.270253da212aea0c4143.png",
-    "static/media/orange-left-tape.png": "/eliza-hat/static/media/orange-left-tape.2b60bbde9a3d72a54405.png",
-    "static/media/orange-left.png": "/eliza-hat/static/media/orange-left.e40d99f48ceb9b943b39.png",
-    "static/media/orange-right.png": "/eliza-hat/static/media/orange-right.22464cc576d8e1ca78f0.png",
-    "static/media/blue-left-tape.png": "/eliza-hat/static/media/blue-left-tape.3322b47cffb9f0d0f833.png",
-    "static/media/blue-right.png": "/eliza-hat/static/media/blue-right.f9f685a47d4c76483ad0.png",
-    "static/media/blue-left.png": "/eliza-hat/static/media/blue-left.d378d54b23551b6cc789.png",
-    "static/media/blue-right-tape.png": "/eliza-hat/static/media/blue-right-tape.a2840c4e47a3c1b446d1.png",
-    "static/media/NHaasGroteskTXStd-Regular.otf": "/eliza-hat/static/media/NHaasGroteskTXStd-Regular.01265ca2f49492afc397.otf",
-    "static/media/NHaasGroteskDSStd-Medium.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Medium.d506e199664404bdc650.otf",
-    "static/media/NHaasGroteskDSStd-Regular.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Regular.cb8ae55667c4ef813a43.otf",
-    "static/media/NHaasGroteskDSStd-Thin.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Thin.1e237853991d449a600a.otf",
-    "static/media/NHaasGroteskDSStd-Bold.otf": "/eliza-hat/static/media/NHaasGroteskDSStd-Bold.7801dd52d172ebe676ec.otf",
-    "static/media/Logo_ElizaOS_White_RGB.svg": "/eliza-hat/static/media/Logo_ElizaOS_White_RGB.bd99ecd3ca60774f7a3dd0c5781e2044.svg",
-    "index.html": "/eliza-hat/index.html",
-    "main.a9237140.css.map": "/eliza-hat/static/css/main.a9237140.css.map",
-    "main.c900005f.js.map": "/eliza-hat/static/js/main.c900005f.js.map",
-    "453.7aad0094.chunk.js.map": "/eliza-hat/static/js/453.7aad0094.chunk.js.map"
+    "main.css": "/static/css/main.9ba4c08d.css",
+    "main.js": "/static/js/main.4ba49145.js",
+    "static/js/453.7aad0094.chunk.js": "/static/js/453.7aad0094.chunk.js",
+    "static/media/orange-right-tape.png": "/static/media/orange-right-tape.270253da212aea0c4143.png",
+    "static/media/orange-left-tape.png": "/static/media/orange-left-tape.2b60bbde9a3d72a54405.png",
+    "static/media/orange-left.png": "/static/media/orange-left.e40d99f48ceb9b943b39.png",
+    "static/media/orange-right.png": "/static/media/orange-right.22464cc576d8e1ca78f0.png",
+    "static/media/blue-left-tape.png": "/static/media/blue-left-tape.3322b47cffb9f0d0f833.png",
+    "static/media/blue-right.png": "/static/media/blue-right.f9f685a47d4c76483ad0.png",
+    "static/media/blue-left.png": "/static/media/blue-left.d378d54b23551b6cc789.png",
+    "static/media/blue-right-tape.png": "/static/media/blue-right-tape.a2840c4e47a3c1b446d1.png",
+    "static/media/NHaasGroteskTXStd-Regular.otf": "/static/media/NHaasGroteskTXStd-Regular.01265ca2f49492afc397.otf",
+    "static/media/NHaasGroteskDSStd-Medium.otf": "/static/media/NHaasGroteskDSStd-Medium.d506e199664404bdc650.otf",
+    "static/media/NHaasGroteskDSStd-Regular.otf": "/static/media/NHaasGroteskDSStd-Regular.cb8ae55667c4ef813a43.otf",
+    "static/media/NHaasGroteskDSStd-Thin.otf": "/static/media/NHaasGroteskDSStd-Thin.1e237853991d449a600a.otf",
+    "static/media/NHaasGroteskDSStd-Bold.otf": "/static/media/NHaasGroteskDSStd-Bold.7801dd52d172ebe676ec.otf",
+    "static/media/Logo_ElizaOS_White_RGB.svg": "/static/media/Logo_ElizaOS_White_RGB.bd99ecd3ca60774f7a3dd0c5781e2044.svg",
+    "index.html": "/index.html",
+    "main.9ba4c08d.css.map": "/static/css/main.9ba4c08d.css.map",
+    "main.4ba49145.js.map": "/static/js/main.4ba49145.js.map",
+    "453.7aad0094.chunk.js.map": "/static/js/453.7aad0094.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9237140.css",
-    "static/js/main.c900005f.js"
+    "static/css/main.9ba4c08d.css",
+    "static/js/main.4ba49145.js"
   ]
 }
