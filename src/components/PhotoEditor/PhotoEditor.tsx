@@ -304,6 +304,11 @@ export const PhotoEditor: React.FC = () => {
                 </a>
             </div>
             
+            {/* Version indicator */}
+            <div className="absolute top-4 right-4 lg:top-8 lg:right-8 z-20">
+                <span className="text-xs text-white font-thin font-mono">v1.0</span>
+            </div>
+            
             {/* Mobile: Bottom Panel, Desktop: Left Panel - Controls */}
             <div className="order-2 lg:order-1 w-full lg:w-1/3 flex flex-col gap-2 lg:gap-6 p-4 lg:p-8 pt-4 lg:pt-24 overflow-y-auto flex-1 lg:flex-none lg:h-auto">
                 <div className="text-center lg:text-left">
