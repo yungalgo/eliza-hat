@@ -1,14 +1,24 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-// Blue hat images
-import blueRightImage from '../../assets/blue-right.png';
-import blueLeftImage from '../../assets/blue-left.png';
-import blueRightTapeImage from '../../assets/blue-right-tape.png';
-import blueLeftTapeImage from '../../assets/blue-left-tape.png';
-// Orange hat images
-import orangeRightImage from '../../assets/orange-right.png';
-import orangeLeftImage from '../../assets/orange-left.png';
-import orangeRightTapeImage from '../../assets/orange-right-tape.png';
-import orangeLeftTapeImage from '../../assets/orange-left-tape.png';
+// Style 1 - Blue hat images
+import blueRightImage from '../../assets/style1/blue-right.png';
+import blueLeftImage from '../../assets/style1/blue-left.png';
+import blueRightTapeImage from '../../assets/style1/blue-right-tape.png';
+import blueLeftTapeImage from '../../assets/style1/blue-left-tape.png';
+// Style 1 - Orange hat images
+import orangeRightImage from '../../assets/style1/orange-right.png';
+import orangeLeftImage from '../../assets/style1/orange-left.png';
+import orangeRightTapeImage from '../../assets/style1/orange-right-tape.png';
+import orangeLeftTapeImage from '../../assets/style1/orange-left-tape.png';
+// Style 2 - Hat images
+import orangeHatWhiteLogoImage from '../../assets/style2/right-orange-hat-white-logo.png';
+import orangeHatBlackLogoImage from '../../assets/style2/right-orange-hat-black-logo.png';
+import blueHatWhiteLogoImage from '../../assets/style2/right-blue-hat-white-logo.png';
+import blackHatOrangeLogoImage from '../../assets/style2/right-black-hat-orange-logo.png';
+// Style 2 - Hat images with tape
+import orangeHatWhiteLogoTapeImage from '../../assets/style2/right-orange-hat-white-logo-w-tape.png';
+import orangeHatBlackLogoTapeImage from '../../assets/style2/right-orange-hat-black-logo-w-tape.png';
+import blueHatWhiteLogoTapeImage from '../../assets/style2/right-blue-hat-white-logo-w-tape.png';
+import blackHatOrangeLogoTapeImage from '../../assets/style2/right-black-hat-orange-logo-w-tape.png';
 import elizaLogo from '../../assets/Logo_ElizaOS_White_RGB.svg';
 import { Position, Transform } from './types';
 
@@ -18,6 +28,8 @@ export const PhotoEditor: React.FC = () => {
     const [currentHatImage, setCurrentHatImage] = useState<string>(orangeRightImage);
     const [hasTape, setHasTape] = useState<boolean>(false);
     const [isFlipped, setIsFlipped] = useState<boolean>(false);
+    const [styleMode, setStyleMode] = useState<'style1' | 'style2'>('style1'); // Style 1 is default
+    const [style2Selection, setStyle2Selection] = useState<'orangeWhiteLogo' | 'orangeBlackLogo' | 'blueWhiteLogo' | 'blackOrangeLogo'>('orangeWhiteLogo'); // Orange White Logo is default for Style 2
     const [transform, setTransform] = useState<Transform>({
         position: { x: 0, y: 0 },
         rotation: 0,
@@ -93,6 +105,27 @@ export const PhotoEditor: React.FC = () => {
             }
         };
     }, []);
+
+    // Handle style mode changes - load correct default image
+    useEffect(() => {
+        if (styleMode === 'style1') {
+            setCurrentHatImage(getHatImage(hatColor, isFlipped, hasTape));
+        } else {
+            // Style 2 - use the current selection with tape consideration
+            const imageMap = hasTape ? {
+                'orangeWhiteLogo': orangeHatWhiteLogoTapeImage,
+                'orangeBlackLogo': orangeHatBlackLogoTapeImage,
+                'blueWhiteLogo': blueHatWhiteLogoTapeImage,
+                'blackOrangeLogo': blackHatOrangeLogoTapeImage,
+            } : {
+                'orangeWhiteLogo': orangeHatWhiteLogoImage,
+                'orangeBlackLogo': orangeHatBlackLogoImage,
+                'blueWhiteLogo': blueHatWhiteLogoImage,
+                'blackOrangeLogo': blackHatOrangeLogoImage,
+            };
+            setCurrentHatImage(imageMap[style2Selection]);
+        }
+    }, [styleMode, hatColor, isFlipped, hasTape, style2Selection, getHatImage]);
 
 
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
@@ -183,6 +216,23 @@ export const PhotoEditor: React.FC = () => {
         setHatColor(newColor);
         setCurrentHatImage(getHatImage(newColor, isFlipped, hasTape));
     }, [isFlipped, hasTape, getHatImage]);
+
+    const handleStyle2Selection = useCallback((selection: 'orangeWhiteLogo' | 'orangeBlackLogo' | 'blueWhiteLogo' | 'blackOrangeLogo') => {
+        setStyle2Selection(selection);
+        // Map selection to the correct image based on tape state
+        const imageMap = hasTape ? {
+            'orangeWhiteLogo': orangeHatWhiteLogoTapeImage,
+            'orangeBlackLogo': orangeHatBlackLogoTapeImage,
+            'blueWhiteLogo': blueHatWhiteLogoTapeImage,
+            'blackOrangeLogo': blackHatOrangeLogoTapeImage,
+        } : {
+            'orangeWhiteLogo': orangeHatWhiteLogoImage,
+            'orangeBlackLogo': orangeHatBlackLogoImage,
+            'blueWhiteLogo': blueHatWhiteLogoImage,
+            'blackOrangeLogo': blackHatOrangeLogoImage,
+        };
+        setCurrentHatImage(imageMap[selection]);
+    }, [hasTape]);
 
     const handleReset = useCallback(() => {
         setTransform({
@@ -326,31 +376,107 @@ export const PhotoEditor: React.FC = () => {
                     />
                 </div>
 
-                {/* Color Selector */}
+                {/* Style Selector */}
                 <div className="w-full">
-                    <div className="flex flex-col gap-2">
-                        <div className="flex gap-2">
-                            <button
-                                onClick={() => handleColorChange('orange')}
-                                className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
-                                    ${hatColor === 'orange' 
-                                        ? 'bg-orange-500 text-white hover:bg-orange-600' 
-                                        : 'bg-white/20 text-white hover:bg-white/30'}`}
-                            >
-                                🟠 Orange
-                            </button>
-                            <button
-                                onClick={() => handleColorChange('blue')}
-                                className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
-                                    ${hatColor === 'blue' 
-                                        ? 'bg-blue-500 text-white hover:bg-blue-600' 
-                                        : 'bg-white/20 text-white hover:bg-white/30'}`}
-                            >
-                                🔵 Blue
-                            </button>
-                        </div>
+                    <div className="flex gap-2">
+                        <button
+                            onClick={() => setStyleMode('style1')}
+                            className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                ${styleMode === 'style1' 
+                                    ? 'bg-white text-[#0b35f1] hover:bg-white/90' 
+                                    : 'bg-white/20 text-white hover:bg-white/30'}`}
+                        >
+                            Style 1
+                        </button>
+                        <button
+                            onClick={() => setStyleMode('style2')}
+                            className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                ${styleMode === 'style2' 
+                                    ? 'bg-white text-[#0b35f1] hover:bg-white/90' 
+                                    : 'bg-white/20 text-white hover:bg-white/30'}`}
+                        >
+                            Style 2
+                        </button>
                     </div>
                 </div>
+
+                {/* Color Selector - Style 1 */}
+                {styleMode === 'style1' && (
+                    <div className="w-full">
+                        <div className="flex flex-col gap-2">
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={() => handleColorChange('orange')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${hatColor === 'orange' 
+                                            ? 'bg-orange-500 text-white hover:bg-orange-600' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    🟠 Orange
+                                </button>
+                                <button
+                                    onClick={() => handleColorChange('blue')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${hatColor === 'blue' 
+                                            ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    🔵 Blue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Color Selector - Style 2 */}
+                {styleMode === 'style2' && (
+                    <div className="w-full">
+                        <div className="flex flex-col gap-2">
+                            {/* Orange Row */}
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={() => handleStyle2Selection('orangeWhiteLogo')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${style2Selection === 'orangeWhiteLogo' 
+                                            ? 'bg-orange-500 text-white hover:bg-orange-600' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    Orange Hat, White Logo
+                                </button>
+                                <button
+                                    onClick={() => handleStyle2Selection('orangeBlackLogo')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${style2Selection === 'orangeBlackLogo' 
+                                            ? 'bg-orange-500 text-white hover:bg-orange-600' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    Orange Hat, Black Logo
+                                </button>
+                            </div>
+                            {/* Blue and Black Row */}
+                            <div className="flex gap-2">
+                                <button
+                                    onClick={() => handleStyle2Selection('blueWhiteLogo')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${style2Selection === 'blueWhiteLogo' 
+                                            ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    Blue Hat, White Logo
+                                </button>
+                                <button
+                                    onClick={() => handleStyle2Selection('blackOrangeLogo')}
+                                    className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                        ${style2Selection === 'blackOrangeLogo' 
+                                            ? 'bg-black text-white hover:bg-gray-800' 
+                                            : 'bg-white/20 text-white hover:bg-white/30'}`}
+                                >
+                                    Black Hat, Orange Logo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 <div className="flex flex-col gap-2 lg:gap-3">
                     {/* Rotate buttons */}
@@ -389,7 +515,11 @@ export const PhotoEditor: React.FC = () => {
                     <div className="flex gap-2 lg:gap-3">
                         <button
                             onClick={handleFlip}
-                            className="flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg bg-white text-[#0b35f1] cursor-pointer text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
+                            disabled={styleMode === 'style2'}
+                            className={`flex-1 px-3 py-2 lg:px-4 lg:py-3 rounded-lg text-sm lg:text-base font-neue-haas-text font-normal tracking-wider transition-all
+                                ${styleMode === 'style2' 
+                                    ? 'bg-gray-400 text-gray-600 cursor-not-allowed opacity-50' 
+                                    : 'bg-white text-[#0b35f1] cursor-pointer hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0'}`}
                         >
                             ↔️ Flip
                         </button>
