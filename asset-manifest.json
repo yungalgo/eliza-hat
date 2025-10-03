@@ -1,8 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b391fb5c.css",
-    "main.js": "/static/js/main.9fc88326.js",
+    "main.css": "/static/css/main.405ab71f.css",
+    "main.js": "/static/js/main.cd4e3393.js",
     "static/js/453.7aad0094.chunk.js": "/static/js/453.7aad0094.chunk.js",
+    "static/media/right-orange-hat-white-logo.png": "/static/media/right-orange-hat-white-logo.fe5f745b81e29066d9a8.png",
+    "static/media/right-orange-hat-black-logo-w-tape.png": "/static/media/right-orange-hat-black-logo-w-tape.03b3062ad2aead4edf8d.png",
+    "static/media/right-orange-hat-white-logo-w-tape.png": "/static/media/right-orange-hat-white-logo-w-tape.78690e6f92995808d52c.png",
+    "static/media/right-orange-hat-black-logo.png": "/static/media/right-orange-hat-black-logo.279b9d69f1e035a742c8.png",
+    "static/media/right-blue-hat-white-logo-w-tape.png": "/static/media/right-blue-hat-white-logo-w-tape.8760a47c4ad92aeb6e34.png",
+    "static/media/right-blue-hat-white-logo.png": "/static/media/right-blue-hat-white-logo.5387d2eeda2d742afde8.png",
+    "static/media/right-black-hat-orange-logo.png": "/static/media/right-black-hat-orange-logo.350f5ac52586e59b5c4d.png",
+    "static/media/right-black-hat-orange-logo-w-tape.png": "/static/media/right-black-hat-orange-logo-w-tape.7072371f96678f8e9a50.png",
     "static/media/blue-right-tape.png": "/static/media/blue-right-tape.31908758ebb31a57e52d.png",
     "static/media/orange-right-tape.png": "/static/media/orange-right-tape.213968d78a0783295d70.png",
     "static/media/blue-left-tape.png": "/static/media/blue-left-tape.01965a9fd580b68939ca.png",
@@ -18,12 +26,12 @@
     "static/media/NHaasGroteskDSStd-Bold.otf": "/static/media/NHaasGroteskDSStd-Bold.7801dd52d172ebe676ec.otf",
     "static/media/Logo_ElizaOS_White_RGB.svg": "/static/media/Logo_ElizaOS_White_RGB.bd99ecd3ca60774f7a3dd0c5781e2044.svg",
     "index.html": "/index.html",
-    "main.b391fb5c.css.map": "/static/css/main.b391fb5c.css.map",
-    "main.9fc88326.js.map": "/static/js/main.9fc88326.js.map",
+    "main.405ab71f.css.map": "/static/css/main.405ab71f.css.map",
+    "main.cd4e3393.js.map": "/static/js/main.cd4e3393.js.map",
     "453.7aad0094.chunk.js.map": "/static/js/453.7aad0094.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b391fb5c.css",
-    "static/js/main.9fc88326.js"
+    "static/css/main.405ab71f.css",
+    "static/js/main.cd4e3393.js"
   ]
 }
